@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Child Care Management Software - Your Technology Partner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sage: {
+                            50: '#f6f7f5',
+                            100: '#e8eae5',
+                            200: '#d1d5ca',
+                            300: '#b4bcaa',
+                            400: '#8B9C7E',
+                            700: '#6B7C5E',
+                            800: '#56654B',
+                            900: '#465339'
+                        },
+                        cream: {
+                            50: '#fdfcfa',
+                            100: '#f9f6f0',
+                            200: '#f3ede0',
+                            300: '#e8dcc8',
+                            700: '#C9A86A',
+                            800: '#B8955A'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/futura-pt');
+        
+        * {
+            font-family: 'Futura PT', 'Futura', sans-serif;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #8B9C7E 0%, #6B7C5E 100%);
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.8s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #8B9C7E;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .pain-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .pain-card:hover {
+            transform: scale(1.02);
+        }
+        
+        .solution-badge {
+            display: inline-block;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+    
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-sage-700">Flowly<span class="text-gray-900">Care</span></div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-sage-700">Home</a>
+                    <a href="#challenges" class="nav-link text-gray-700 hover:text-sage-700">Challenges</a>
+                    <a href="#solutions" class="nav-link text-gray-700 hover:text-sage-700">Solutions</a>
+                    <a href="#pricing" class="nav-link text-gray-700 hover:text-sage-700">Pricing</a>
+                    <a href="#why-us" class="nav-link text-gray-700 hover:text-sage-700">Why Us</a>
+                    <a href="#testimonials" class="nav-link text-gray-700 hover:text-sage-700">Testimonials</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-sage-700">Contact</a>
+                </div>
+                <button class="bg-sage-700 text-white px-6 py-2 rounded-full hover:bg-sage-800 transition">Get Started</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 px-6 gradient-bg text-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="max-w-3xl fade-in">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">Focus on the children. We'll handle the technology.</h1>
+                <p class="text-xl md:text-2xl mb-8">Join hundreds of child care providers who've simplified their operations and refocused on what matters most.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="bg-white text-sage-700 px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl transition transform hover:scale-105">Schedule a Demo</button>
+                <button class="bg-sage-900 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-sage-800 transition">Get Started Free</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pain Points Section -->
+    <section id="challenges" class="py-20 px-6 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">We understand your challenges</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Every day brings new obstacles. You shouldn't have to face technology problems alone.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Pain Point 1 -->
+                <div class="pain-card bg-white p-8 rounded-2xl shadow-sm hover-lift">
+                    <div class="w-14 h-14 bg-sage-100 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-sage-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3">Drowning in paperwork</h3>
+                    <p class="text-gray-600 mb-4">Hours spent on attendance sheets, incident reports, and billing instead of engaging with children.</p>
+                    <div class="text-sage-700 font-medium">→ Digital Management System</div>
+                </div>
+
+                <!-- Pain Point 2 -->
+                <div class="pain-card bg-white p-8 rounded-2xl shadow-sm hover-lift">
+                    <div class="w-14 h-14 bg-cream-100 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-cream-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3">Parent communication chaos</h3>
+                    <p class="text-gray-600 mb-4">Missed messages, lost emails, and frustrated parents asking the same questions repeatedly.</p>
+                    <div class="text-sage-700 font-medium">→ Parent Portal & Messaging</div>
+                </div>
+
+                <!-- Pain Point 3 -->
+                <div class="pain-card bg-white p-8 rounded-2xl shadow-sm hover-lift">
+                    <div class="w-14 h-14 bg-sage-100 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-sage-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3">Billing nightmares</h3>
+                    <p class="text-gray-600 mb-4">Late payments, manual invoicing, and hours reconciling who paid what and when.</p>
+                    <div class="text-sage-700 font-medium">→ Automated Billing System</div>
+                </div>
+
+                <!-- Pain Point 4 -->
+                <div class="pain-card bg-white p-8 rounded-2xl shadow-sm hover-lift">
+                    <div class="w-14 h-14 bg-cream-100 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-cream-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3">Compliance stress</h3>
+                    <p class="text-gray-600 mb-4">Constantly worried about licensing requirements, staff certifications, and regulatory audits.</p>
+                    <div class="text-sage-700 font-medium">→ Compliance Tracking Tools</div>
+                </div>
+
+                <!-- Pain Point 5 -->
+                <div class="pain-card bg-white p-8 rounded-2xl shadow-sm hover-lift">
+                    <div class="w-14 h-14 bg-sage-100 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-sage-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3">Unprofessional online presence</h3>
+                    <p class="text-gray-600 mb-4">Outdated website, generic email address, and losing potential families to competitors.</p>
+                    <div class="text-sage-700 font-medium">→ Professional Web & Email</div>
+                </div>
+
+                <!-- Pain Point 6 -->
+                <div class="pain-card bg-white p-8 rounded-2xl shadow-sm hover-lift">
+                    <div class="w-14 h-14 bg-cream-100 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-cream-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3">Tour scheduling headaches</h3>
+                    <p class="text-gray-600 mb-4">Double bookings, missed appointments, and prospective families slipping through the cracks.</p>
+                    <div class="text-sage-700 font-medium">→ Tour & Appointment Booking</div>
+                </div>
+
+                <!-- Pain Point 7 -->
+                <div class="pain-card bg-white p-8 rounded-2xl shadow-sm hover-lift">
+                    <div class="w-14 h-14 bg-sage-100 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-sage-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3">Enrollment paperwork maze</h3>
+                    <p class="text-gray-600 mb-4">Stacks of incomplete forms, chasing parents for signatures, and lost registration documents.</p>
+                    <div class="text-sage-700 font-medium">→ Digital Enrollment & Forms</div>
+                </div>
+
+                <!-- Pain Point 8 -->
+                <div class="pain-card bg-white p-8 rounded-2xl shadow-sm hover-lift">
+                    <div class="w-14 h-14 bg-cream-100 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-cream-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3">Lost track of development</h3>
+                    <p class="text-gray-600 mb-4">Scrambling to remember milestones, struggling to show progress during parent conferences.</p>
+                    <div class="text-sage-700 font-medium">→ Progress Tracking & Reports</div>
+                </div>
+
+                <!-- Pain Point 9 -->
+                <div class="pain-card bg-white p-8 rounded-2xl shadow-sm hover-lift">
+                    <div class="w-14 h-14 bg-sage-100 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-sage-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3">Curriculum planning confusion</h3>
+                    <p class="text-gray-600 mb-4">Teachers creating their own lesson plans with no consistency across classrooms or age groups.</p>
+                    <div class="text-sage-700 font-medium">→ Curriculum Management</div>
+                </div>
+
+                <!-- Pain Point 10 -->
+                <div class="pain-card bg-white p-8 rounded-2xl shadow-sm hover-lift">
+                    <div class="w-14 h-14 bg-cream-100 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-cream-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3">Tech overwhelm</h3>
+                    <p class="text-gray-600 mb-4">Scared to adopt new technology because you don't have time to learn it or fix it when it breaks.</p>
+                    <div class="text-sage-700 font-medium">→ Dedicated IT Support</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section id="solutions" class="py-20 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Everything you need. Nothing you don't.</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">One partner for all your technology needs. Simple pricing. Exceptional support.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
+                <div>
+                    <div class="solution-badge inline-block bg-sage-100 text-sage-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">COMPLETE PLATFORM</div>
+                    <h3 class="text-3xl font-bold mb-4">Child care management that actually works</h3>
+                    <p class="text-gray-600 text-lg mb-6">Say goodbye to juggling multiple systems. Our all-in-one platform handles attendance tracking, daily reports, meal planning, photo sharing, behavior logs, and developmental milestones—all from one beautiful interface that your staff will actually enjoy using.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-sage-700 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-700">Digital check-in/out with contactless QR codes</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-sage-700 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-700">Real-time updates to parents throughout the day</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-sage-700 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-700">Staff scheduling with automated notifications</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-gradient-to-br from-sage-50 to-cream-50 rounded-3xl p-12 shadow-lg">
+                    <div class="bg-white rounded-2xl p-6 shadow-sm mb-4">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="font-semibold">Today's Attendance</div>
+                            <div class="text-sm text-sage-700 font-medium">24/28 checked in</div>
+                        </div>
+                        <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+                            <div class="h-full bg-sage-700 rounded-full" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-2xl p-6 shadow-sm">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <div class="text-sm text-gray-500">Outstanding Payments</div>
+                                <div class="text-2xl font-bold text-gray-900">$3,240</div>
+                            </div>
+                            <div class="w-12 h-12 bg-sage-100 rounded-full flex items-center justify-center">
+                                <svg class="w-6 h-6 text-sage-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
+                <div class="order-2 md:order-1 bg-gradient-to-br from-cream-50 to-sage-50 rounded-3xl p-12 shadow-lg">
+                    <div class="bg-white rounded-2xl p-8 shadow-sm text-center">
+                        <div class="w-20 h-20 bg-sage-700 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+                            </svg>
+                        </div>
+                        <h4 class="text-xl font-bold mb-2">yourchildcare.com</h4>
+                        <p class="text-gray-600">Professional website included</p>
+                    </div>
+                </div>
+                <div class="order-1 md:order-2">
+                    <div class="solution-badge inline-block bg-cream-100 text-cream-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">PROFESSIONAL PRESENCE</div>
+                    <h3 class="text-3xl font-bold mb-4">Look professional. Be professional.</h3>
+                    <p class="text-gray-600 text-lg mb-6">First impressions matter. Get a beautiful, mobile-friendly website with online enrollment forms, virtual tours, and testimonials. Plus, professional email addresses that build trust with parents (no more gmail accounts).</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-sage-700 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-700">Custom domain and branded email addresses</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-sage-700 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-700">Online enrollment and waitlist management</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-sage-700 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-700">SEO optimization to attract local families</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-gradient-to-r from-sage-700 to-sage-800 rounded-3xl p-12 text-white">
+                <div class="max-w-3xl">
+                    <div class="solution-badge inline-block bg-white/20 text-white px-4 py-2 rounded-full text-sm font-semibold mb-6">YOUR TECHNOLOGY PARTNER</div>
+                    <h3 class="text-3xl md:text-4xl font-bold mb-4">We handle the tech. You handle the kids.</h3>
+                    <p class="text-xl mb-8 text-white/90">From server maintenance to software updates, email troubleshooting to data backups—we take care of everything. When something breaks, we fix it. When you have questions, we answer them. Simple as that.</p>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="bg-white/10 backdrop-blur rounded-xl p-6">
+                            <div class="text-3xl font-bold mb-2">24/7</div>
+                            <div class="text-white/90">System monitoring and support</div>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur rounded-xl p-6">
+                            <div class="text-3xl font-bold mb-2">&lt;2hr</div>
+                            <div class="text-white/90">Average response time</div>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur rounded-xl p-6">
+                            <div class="text-3xl font-bold mb-2">99.9%</div>
+                            <div class="text-white/90">Uptime guarantee</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 px-6 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Simple, Transparent Pricing</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Choose the plan that fits your child care business. All plans include full support and updates.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Basic Plan -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover-lift border border-gray-200">
+                    <h3 class="text-2xl font-bold mb-4">Basic</h3>
+                    <p class="text-gray-600 mb-6">Perfect for small centers</p>
+                    <div class="text-4xl font-bold mb-2">$49</div>
+                    <p class="text-gray-500 mb-8">per month</p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-sage-700 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Core management tools
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-sage-700 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Parent portal
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-sage-700 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Basic billing
+                        </li>
+                    </ul>
+                    <button class="w-full bg-sage-700 text-white px-6 py-3 rounded-full hover:bg-sage-800">Get Started</button>
+                </div>
+                <!-- Pro Plan -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover-lift border-2 border-sage-700 relative">
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-sage-700 text-white px-4 py-1 rounded-full text-sm">Most Popular</div>
+                    <h3 class="text-2xl font-bold mb-4">Pro</h3>
+                    <p class="text-gray-600 mb-6">For growing businesses</p>
+                    <div class="text-4xl font-bold mb-2">$99</div>
+                    <p class="text-gray-500 mb-8">per month</p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-sage-700 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Everything in Basic
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-sage-700 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Advanced billing & payments
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-sage-700 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Custom website
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-sage-700 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Priority support
+                        </li>
+                    </ul>
+                    <button class="w-full bg-sage-700 text-white px-6 py-3 rounded-full hover:bg-sage-800">Get Started</button>
+                </div>
+                <!-- Enterprise Plan -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover-lift border border-gray-200">
+                    <h3 class="text-2xl font-bold mb-4">Enterprise</h3>
+                    <p class="text-gray-600 mb-6">For large organizations</p>
+                    <div class="text-4xl font-bold mb-2">Custom</div>
+                    <p class="text-gray-500 mb-8">Contact us</p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-sage-700 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Everything in Pro
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-sage-700 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Multi-location support
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-sage-700 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Custom integrations
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-sage-700 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Dedicated account manager
+                        </li>
+                    </ul>
+                    <button class="w-full bg-sage-700 text-white px-6 py-3 rounded-full hover:bg-sage-800">Contact Sales</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section id="why-us" class="py-20 px-6 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Why child care providers choose us</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">We're not just another software company. We're your partner in success.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl p-8 shadow-sm">
+                    <div class="text-5xl mb-4">🎯</div>
+                    <h3 class="text-xl font-bold mb-3">Built for child care</h3>
+                    <p class="text-gray-600">We understand your industry inside and out. Every feature is designed specifically for how child care businesses actually work.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-sm">
+                    <div class="text-5xl mb-4">💬</div>
+                    <h3 class="text-xl font-bold mb-3">Real human support</h3>
+                    <p class="text-gray-600">No chatbots. No endless phone menus. Just real people who care about your success and respond quickly when you need help.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-sm">
+                    <div class="text-5xl mb-4">🔒</div>
+                    <h3 class="text-xl font-bold mb-3">Secure and compliant</h3>
+                    <p class="text-gray-600">Bank-level encryption, automatic backups, and compliance with all child care regulations. Your data is safe with us.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-sm">
+                    <div class="text-5xl mb-4">📱</div>
+                    <h3 class="text-xl font-bold mb-3">Works everywhere</h3>
+                    <p class="text-gray-600">Desktop, tablet, or phone—our platform works beautifully on any device. Check in kids from the classroom or review reports from home.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-sm">
+                    <div class="text-5xl mb-4">💰</div>
+                    <h3 class="text-xl font-bold mb-3">Transparent pricing</h3>
+                    <p class="text-gray-600">One simple price includes everything. No hidden fees, no surprise charges, no nickel-and-diming for features you actually need.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-sm">
+                    <div class="text-5xl mb-4">🚀</div>
+                    <h3 class="text-xl font-bold mb-3">Quick setup</h3>
+                    <p class="text-gray-600">We'll migrate your data, train your staff, and have you up and running in days, not months. Minimal disruption, maximum results.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">What Our Customers Say</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Hear from child care providers who've transformed their operations with ChildCareTech.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-50 p-8 rounded-2xl">
+                    <p class="text-gray-600 mb-6">"ChildCareTech has revolutionized how we manage our center. The parent portal alone has saved us hours every day!"</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-sage-100 rounded-full flex-shrink-0 mr-4"></div>
+                        <div>
+                            <div class="font-semibold">Sarah Johnson</div>
+                            <div class="text-gray-500 text-sm">Director, Little Stars Child Care</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-50 p-8 rounded-2xl">
+                    <p class="text-gray-600 mb-6">"The billing system is a game-changer. No more chasing payments, and the reports make tax time a breeze."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-cream-100 rounded-full flex-shrink-0 mr-4"></div>
+                        <div>
+                            <div class="font-semibold">Michael Lee</div>
+                            <div class="text-gray-500 text-sm">Owner, Happy Kids Academy</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-50 p-8 rounded-2xl">
+                    <p class="text-gray-600 mb-6">"Their support team is amazing. Always there when we need them, and the software just works."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-sage-100 rounded-full flex-shrink-0 mr-4"></div>
+                        <div>
+                            <div class="font-semibold">Emily Chen</div>
+                            <div class="text-gray-500 text-sm">Manager, Bright Futures Daycare</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="py-20 px-6 gradient-bg text-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to simplify your life?</h2>
+            <p class="text-xl md:text-2xl mb-8 text-white/90 font-light">Running a child care business is demanding enough. Let us be your technology partner so you can do what you do best—care for children.</p>
+            <form class="max-w-md mx-auto space-y-6">
+                <input type="text" placeholder="Your Name" class="w-full p-4 rounded-full bg-white/10 border border-white/20 text-white placeholder-white/70 focus:outline-none focus:border-white/40">
+                <input type="email" placeholder="Your Email" class="w-full p-4 rounded-full bg-white/10 border border-white/20 text-white placeholder-white/70 focus:outline-none focus:border-white/40">
+                <textarea placeholder="Your Message" class="w-full p-4 rounded-full bg-white/10 border border-white/20 text-white placeholder-white/70 h-32 focus:outline-none focus:border-white/40"></textarea>
+                <button type="submit" class="w-full bg-white text-sage-700 px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl transition transform hover:scale-105">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12 px-6">
+        <div class="max-w-7xl mx-auto text-center">
+            <div class="text-2xl font-bold text-white mb-4">ChildCare<span class="text-sage-400">Tech</span></div>
+            <p class="mb-6">Your complete technology partner for child care success</p>
+            <div class="flex justify-center space-x-6 text-sm">
+                <a href="#" class="hover:text-sage-400 transition">Privacy Policy</a>
+                <a href="#" class="hover:text-sage-400 transition">Terms of Service</a>
+                <a href="#" class="hover:text-sage-400 transition">Support</a>
+            </div>
+            <p class="mt-6 text-sm text-gray-500">&copy; 2026 ChildCareTech. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
