@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - FlowlyCare | Your Technology Partner for Child Care</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sage: {
+                            50: '#f6f7f5',
+                            100: '#e8eae5',
+                            200: '#d1d5ca',
+                            300: '#b4bcaa',
+                            400: '#8B9C7E',
+                            700: '#6B7C5E',
+                            800: '#56654B',
+                            900: '#465339'
+                        },
+                        cream: {
+                            50: '#fdfcfa',
+                            100: '#f9f6f0',
+                            200: '#f3ede0',
+                            300: '#e8dcc8',
+                            700: '#C9A86A',
+                            800: '#B8955A'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/futura-pt');
+        
+        * {
+            font-family: 'Futura PT', 'Futura', sans-serif;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #8B9C7E 0%, #6B7C5E 100%);
+        }
+        
+        .gradient-bg-reverse {
+            background: linear-gradient(135deg, #6B7C5E 0%, #465339 100%);
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.8s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .stagger-1 { animation-delay: 0.1s; }
+        .stagger-2 { animation-delay: 0.2s; }
+        .stagger-3 { animation-delay: 0.3s; }
+        .stagger-4 { animation-delay: 0.4s; }
+        
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #8B9C7E;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #8B9C7E, #C9A86A);
+            transform: translateX(-50%);
+        }
+        
+        .timeline-dot {
+            width: 16px;
+            height: 16px;
+            background: #6B7C5E;
+            border: 4px solid white;
+            border-radius: 50%;
+            box-shadow: 0 0 0 4px rgba(107, 124, 94, 0.2);
+        }
+        
+        .quote-mark {
+            font-size: 120px;
+            line-height: 1;
+            opacity: 0.1;
+            position: absolute;
+            top: -20px;
+            left: 20px;
+        }
+        
+        .pattern-bg {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%238B9C7E' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        .founder-card {
+            background: linear-gradient(145deg, #ffffff 0%, #f9f6f0 100%);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+    
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="flowlycare.html" class="text-2xl font-bold text-sage-700">Flowly<span class="text-gray-900">Care</span></a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="flowlycare.html" class="nav-link text-gray-700 hover:text-sage-700">Home</a>
+                    <a href="#mission" class="nav-link text-gray-700 hover:text-sage-700">Mission</a>
+                    <a href="#problem" class="nav-link text-gray-700 hover:text-sage-700">The Problem</a>
+                    <a href="#solution" class="nav-link text-gray-700 hover:text-sage-700">Our Solution</a>
+                    <a href="#difference" class="nav-link text-gray-700 hover:text-sage-700">Why Us</a>
+                    <a href="#leadership" class="nav-link text-gray-700 hover:text-sage-700">Leadership</a>
+                </div>
+                <a href="flowlycare.html#contact" class="bg-sage-700 text-white px-6 py-2 rounded-full hover:bg-sage-800 transition">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="mission" class="pt-32 pb-24 px-6 gradient-bg text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <defs>
+                    <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+                        <path d="M 10 0 L 0 0 0 10" fill="none" stroke="white" stroke-width="0.5"/>
+                    </pattern>
+                </defs>
+                <rect width="100" height="100" fill="url(#grid)"/>
+            </svg>
+        </div>
+        <div class="max-w-7xl mx-auto relative">
+            <div class="max-w-4xl mx-auto text-center fade-in">
+                <div class="inline-block bg-white/20 backdrop-blur px-6 py-2 rounded-full text-sm font-semibold mb-8">
+                    THE TECHNOLOGY PARTNER FOR CHILD CARE
+                </div>
+                <h1 class="text-5xl md:text-7xl font-bold mb-8 leading-tight">
+                    Focus on children.<br/>
+                    <span class="text-cream-300">We handle the tech.</span>
+                </h1>
+                <p class="text-xl md:text-2xl mb-10 text-white/90 max-w-3xl mx-auto leading-relaxed">
+                    FlowlyCare is an all-in-one technology partner designed to eliminate the operational and technical burden faced by child care providers. Our mission is simple: let providers focus on children, while we handle everything tech.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="flowlycare.html#contact" class="bg-white text-sage-700 px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl transition transform hover:scale-105">Schedule a Demo</a>
+                    <a href="#solution" class="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/10 transition">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Problem Section -->
+    <section id="problem" class="py-24 px-6 bg-gray-50 pattern-bg">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 fade-in">
+                <div class="inline-block bg-red-100 text-red-700 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                    THE CHALLENGE
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">The Problem We're Solving</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Child care providers are experts in nurturing and educating children, yet they are forced to manage complex technology that distracts from their core mission.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-16">
+                <!-- Problem Card 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover-lift border-l-4 border-red-400">
+                    <div class="flex items-start gap-6">
+                        <div class="w-16 h-16 bg-red-100 rounded-2xl flex items-center justify-center flex-shrink-0">
+                            <svg class="w-8 h-8 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-3">Fragmented Management Software</h3>
+                            <p class="text-gray-600">Multiple disconnected tools that don't talk to each other, forcing staff to enter data multiple times and switch between platforms constantly.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Problem Card 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover-lift border-l-4 border-orange-400">
+                    <div class="flex items-start gap-6">
+                        <div class="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center flex-shrink-0">
+                            <svg class="w-8 h-8 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-3">Manual Attendance, Billing & Reporting</h3>
+                            <p class="text-gray-600">Paper-based processes and spreadsheets that eat up hours every week and are prone to errors and lost information.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Problem Card 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover-lift border-l-4 border-yellow-400">
+                    <div class="flex items-start gap-6">
+                        <div class="w-16 h-16 bg-yellow-100 rounded-2xl flex items-center justify-center flex-shrink-0">
+                            <svg class="w-8 h-8 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-3">Poor Parent Communication Tools</h3>
+                            <p class="text-gray-600">Outdated messaging systems, lost emails, and no central place for parents to stay informed about their child's day.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Problem Card 4 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover-lift border-l-4 border-purple-400">
+                    <div class="flex items-start gap-6">
+                        <div class="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center flex-shrink-0">
+                            <svg class="w-8 h-8 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-3">Unreliable IT & Outdated Websites</h3>
+                            <p class="text-gray-600">Technology that breaks at the worst times, websites that look unprofessional, and no one to call when things go wrong.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Impact Statement -->
+            <div class="bg-gray-900 rounded-3xl p-12 text-white text-center">
+                <p class="text-2xl md:text-3xl font-light leading-relaxed">
+                    These distractions <span class="font-bold text-cream-300">consume valuable time</span>, <span class="font-bold text-cream-300">increase stress</span>, and <span class="font-bold text-cream-300">reduce the quality</span> of care and business operations.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Solution Section -->
+    <section id="solution" class="py-24 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <div class="inline-block bg-sage-100 text-sage-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                    OUR APPROACH
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">The FlowlyCare Solution</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    A single, seamless platform combined with hands-on technology support. We remove the "how" entirely — technology becomes invisible, reliable, and effortless.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-stretch">
+                <!-- Left Column - Solutions List -->
+                <div class="space-y-6">
+                    <!-- Solution 1 -->
+                    <div class="bg-gradient-to-r from-sage-50 to-transparent p-8 rounded-2xl border-l-4 border-sage-700 hover-lift">
+                        <div class="flex items-start gap-5">
+                            <div class="w-14 h-14 bg-sage-700 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Child Care Management Software</h3>
+                                <p class="text-gray-600">Attendance tracking, automated billing, comprehensive reporting, and compliance management — all in one unified system.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Solution 2 -->
+                    <div class="bg-gradient-to-r from-cream-50 to-transparent p-8 rounded-2xl border-l-4 border-cream-700 hover-lift">
+                        <div class="flex items-start gap-5">
+                            <div class="w-14 h-14 bg-cream-700 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Parent Communication Tools</h3>
+                                <p class="text-gray-600">Real-time updates, photo sharing, daily reports, and a parent portal that keeps families engaged and informed.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Solution 3 -->
+                    <div class="bg-gradient-to-r from-sage-50 to-transparent p-8 rounded-2xl border-l-4 border-sage-700 hover-lift">
+                        <div class="flex items-start gap-5">
+                            <div class="w-14 h-14 bg-sage-700 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Professional Websites & Email</h3>
+                                <p class="text-gray-600">Beautiful, mobile-friendly websites with online enrollment and branded email systems that build trust with families.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Solution 4 -->
+                    <div class="bg-gradient-to-r from-cream-50 to-transparent p-8 rounded-2xl border-l-4 border-cream-700 hover-lift">
+                        <div class="flex items-start gap-5">
+                            <div class="w-14 h-14 bg-cream-700 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Dedicated IT Support</h3>
+                                <p class="text-gray-600">Ongoing maintenance, troubleshooting, and a real person to call when you need help. We're your technology team.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column - Visual -->
+                <div class="bg-gradient-to-br from-sage-100 via-cream-50 to-sage-50 rounded-3xl p-10 flex flex-col justify-center">
+                    <div class="text-center mb-8">
+                        <div class="w-24 h-24 bg-sage-700 rounded-full mx-auto mb-6 flex items-center justify-center shadow-xl">
+                            <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-3xl font-bold mb-4">Technology Made Invisible</h3>
+                        <p class="text-gray-600 text-lg">When technology works perfectly, you don't even notice it's there. That's our goal.</p>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-white rounded-xl p-5 shadow-sm flex items-center gap-4">
+                            <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <span class="font-medium">No technical knowledge required</span>
+                        </div>
+                        <div class="bg-white rounded-xl p-5 shadow-sm flex items-center gap-4">
+                            <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <span class="font-medium">We handle all setup & maintenance</span>
+                        </div>
+                        <div class="bg-white rounded-xl p-5 shadow-sm flex items-center gap-4">
+                            <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <span class="font-medium">Real humans, real support</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Now Section -->
+    <section class="py-24 px-6 gradient-bg-reverse text-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <div class="inline-block bg-white/20 backdrop-blur px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                    THE OPPORTUNITY
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Why Now?</h2>
+                <p class="text-xl text-white/80 max-w-3xl mx-auto">
+                    The timing has never been better for child care providers to embrace modern technology solutions.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white/10 backdrop-blur rounded-2xl p-8 text-center hover-lift">
+                    <div class="w-16 h-16 bg-white/20 rounded-full mx-auto mb-6 flex items-center justify-center">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Underserved Industry</h3>
+                    <p class="text-white/80">Child care remains one of the least digitally transformed industries despite its critical importance.</p>
+                </div>
+
+                <div class="bg-white/10 backdrop-blur rounded-2xl p-8 text-center hover-lift">
+                    <div class="w-16 h-16 bg-white/20 rounded-full mx-auto mb-6 flex items-center justify-center">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Overwhelmed Providers</h3>
+                    <p class="text-white/80">Providers are struggling with disconnected tools and spending more time on admin than on children.</p>
+                </div>
+
+                <div class="bg-white/10 backdrop-blur rounded-2xl p-8 text-center hover-lift">
+                    <div class="w-16 h-16 bg-white/20 rounded-full mx-auto mb-6 flex items-center justify-center">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Parent Expectations</h3>
+                    <p class="text-white/80">Modern parents expect real-time updates, transparency, and professional digital experiences.</p>
+                </div>
+
+                <div class="bg-white/10 backdrop-blur rounded-2xl p-8 text-center hover-lift">
+                    <div class="w-16 h-16 bg-white/20 rounded-full mx-auto mb-6 flex items-center justify-center">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Enterprise for Small</h3>
+                    <p class="text-white/80">Small operators need enterprise-grade technology and support without enterprise complexity or cost.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Differentiation Section -->
+    <section id="difference" class="py-24 px-6 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <div class="inline-block bg-cream-100 text-cream-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                    OUR DIFFERENCE
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Not Just Software — A Partner</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    FlowlyCare is fundamentally different from other solutions in the market. Here's why.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <!-- Difference 1 -->
+                <div class="bg-white rounded-3xl p-10 shadow-sm hover-lift relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-sage-100 rounded-bl-full opacity-50"></div>
+                    <div class="relative">
+                        <div class="text-6xl mb-6">🛠️</div>
+                        <h3 class="text-2xl font-bold mb-4">Complete Setup & Support</h3>
+                        <p class="text-gray-600 mb-6">We don't just sell you software and disappear. We handle everything from initial setup to ongoing maintenance and troubleshooting.</p>
+                        <div class="flex items-center text-sage-700 font-semibold">
+                            <span>Full-service approach</span>
+                            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Difference 2 -->
+                <div class="bg-white rounded-3xl p-10 shadow-sm hover-lift relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-cream-100 rounded-bl-full opacity-50"></div>
+                    <div class="relative">
+                        <div class="text-6xl mb-6">🔗</div>
+                        <h3 class="text-2xl font-bold mb-4">Unified Experience</h3>
+                        <p class="text-gray-600 mb-6">Instead of juggling multiple fragmented tools, get everything you need in one seamless platform that works together perfectly.</p>
+                        <div class="flex items-center text-sage-700 font-semibold">
+                            <span>One platform, all needs</span>
+                            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Difference 3 -->
+                <div class="bg-white rounded-3xl p-10 shadow-sm hover-lift relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-sage-100 rounded-bl-full opacity-50"></div>
+                    <div class="relative">
+                        <div class="text-6xl mb-6">👶</div>
+                        <h3 class="text-2xl font-bold mb-4">Built for Child Care</h3>
+                        <p class="text-gray-600 mb-6">Every feature is designed specifically for real child care workflows, not adapted from generic business software.</p>
+                        <div class="flex items-center text-sage-700 font-semibold">
+                            <span>Industry expertise</span>
+                            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comparison -->
+            <div class="bg-white rounded-3xl p-10 shadow-sm">
+                <h3 class="text-2xl font-bold mb-8 text-center">The FlowlyCare Difference</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="border-r border-gray-200 pr-8">
+                        <h4 class="text-lg font-bold text-gray-400 mb-6 uppercase tracking-wide">Other Solutions</h4>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <svg class="w-6 h-6 text-red-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-gray-600">Self-service setup with limited guidance</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-6 h-6 text-red-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-gray-600">Multiple disconnected tools to manage</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-6 h-6 text-red-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-gray-600">Generic software adapted for child care</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-6 h-6 text-red-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-gray-600">Chatbots and ticket systems for support</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pl-8">
+                        <h4 class="text-lg font-bold text-sage-700 mb-6 uppercase tracking-wide">FlowlyCare</h4>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <svg class="w-6 h-6 text-sage-700 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-gray-700 font-medium">Complete hands-on setup and migration</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-6 h-6 text-sage-700 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-gray-700 font-medium">One unified platform for everything</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-6 h-6 text-sage-700 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-gray-700 font-medium">Purpose-built for child care workflows</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-6 h-6 text-sage-700 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-gray-700 font-medium">Real humans who respond quickly</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Section -->
+    <section id="leadership" class="py-24 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <div class="inline-block bg-sage-100 text-sage-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                    LEADERSHIP
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Meet Our Founder</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Enterprise-level thinking for an industry that serves families and communities every day.
+                </p>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="founder-card rounded-3xl p-10 md:p-14 shadow-lg relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-sage-100 rounded-bl-full opacity-30"></div>
+                    <div class="absolute bottom-0 left-0 w-48 h-48 bg-cream-100 rounded-tr-full opacity-30"></div>
+                    
+                    <div class="relative grid md:grid-cols-3 gap-10 items-center">
+                        <!-- Photo placeholder -->
+                        <div class="md:col-span-1">
+                            <div class="w-48 h-48 md:w-full md:h-auto md:aspect-square bg-gradient-to-br from-sage-400 to-sage-700 rounded-2xl mx-auto flex items-center justify-center shadow-xl">
+                                <span class="text-white text-6xl font-bold">PF</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Bio -->
+                        <div class="md:col-span-2">
+                            <h3 class="text-3xl font-bold mb-2">Prishan Fernando</h3>
+                            <p class="text-sage-700 font-semibold text-lg mb-6">Founder & CEO</p>
+                            
+                            <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                                A technology leader with <span class="font-semibold text-gray-900">16+ years of experience</span> building enterprise systems and leading global teams. Prishan brings enterprise-level thinking to an industry that serves families and communities every day.
+                            </p>
+                            
+                            <p class="text-gray-600 text-lg leading-relaxed mb-8">
+                                With a passion for creating technology that genuinely helps people, Prishan founded FlowlyCare to bridge the gap between enterprise-grade solutions and the real-world needs of child care providers.
+                            </p>
+                            
+                            <div class="flex flex-wrap gap-3">
+                                <span class="bg-sage-100 text-sage-800 px-4 py-2 rounded-full text-sm font-medium">Enterprise Systems</span>
+                                <span class="bg-cream-100 text-cream-800 px-4 py-2 rounded-full text-sm font-medium">Global Teams</span>
+                                <span class="bg-sage-100 text-sage-800 px-4 py-2 rounded-full text-sm font-medium">16+ Years Experience</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Statement CTA -->
+    <section class="py-24 px-6 gradient-bg text-white">
+        <div class="max-w-5xl mx-auto text-center">
+            <div class="relative">
+                <span class="quote-mark text-white">"</span>
+                <h2 class="text-4xl md:text-6xl font-bold mb-8 leading-tight relative z-10">
+                    Focus on children.<br/>
+                    <span class="text-cream-300">We handle the tech.</span>
+                </h2>
+            </div>
+            <p class="text-xl md:text-2xl mb-10 text-white/90 max-w-3xl mx-auto">
+                Ready to simplify your operations and refocus on what matters most? Let's talk about how FlowlyCare can transform your child care business.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="flowlycare.html#contact" class="bg-white text-sage-700 px-10 py-5 rounded-full text-lg font-semibold hover:shadow-2xl transition transform hover:scale-105">Schedule a Demo</a>
+                <a href="flowlycare.html#pricing" class="border-2 border-white text-white px-10 py-5 rounded-full text-lg font-semibold hover:bg-white/10 transition">View Pricing</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-16 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-10 mb-12">
+                <div class="md:col-span-2">
+                    <div class="text-2xl font-bold text-white mb-4">Flowly<span class="text-sage-400">Care</span></div>
+                    <p class="text-gray-400 mb-6 max-w-md">The technology partner for child care providers. We handle the tech so you can focus on what matters most — the children.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-sage-700 transition">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-sage-700 transition">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-sage-700 transition">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="flowlycare.html" class="hover:text-sage-400 transition">Home</a></li>
+                        <li><a href="#mission" class="hover:text-sage-400 transition">About Us</a></li>
+                        <li><a href="flowlycare.html#solutions" class="hover:text-sage-400 transition">Solutions</a></li>
+                        <li><a href="flowlycare.html#pricing" class="hover:text-sage-400 transition">Pricing</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-3">
+                        <li><a href="flowlycare.html#contact" class="hover:text-sage-400 transition">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-sage-400 transition">Support</a></li>
+                        <li><a href="#" class="hover:text-sage-400 transition">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-sage-400 transition">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-sm text-gray-500">&copy; 2026 FlowlyCare. All rights reserved. The technology partner for child care providers.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+
